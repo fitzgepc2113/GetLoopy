@@ -36,3 +36,48 @@ class Task3 {
 
     }
 }
+
+class Task4 {
+    public static void main(String[] args)
+    {
+        for (int c = 10; c >= 0; c-=2)
+        {
+            System.out.print("\t" + c);
+        }
+        System.out.print("\n");
+
+    }
+}
+
+class Task7 {
+    public static void main(String[] args)
+    {
+        for (int row = 1; row <= 5; row++)
+        {
+            System.out.println("");
+            for (int col = 1; col <= 5; col++)
+            {
+                System.out.print("*\t");
+            }
+        }
+        System.out.println("");
+
+    }
+}
+
+class Task5 {
+    public static void main(String[] args)
+    {
+        for (int row = 1; row <= 5; row++)
+        {
+            System.out.println("");
+            for (int col = 1; col <= row; col+= 1)
+            {
+                System.out.print("*\t");
+            }
+        }
+        System.out.println("");
+
+    }
+}
+
