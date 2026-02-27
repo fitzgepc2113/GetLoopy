@@ -1,5 +1,6 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Random;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args)
     {
@@ -96,3 +97,49 @@ class Task6 {
 
     }
 }
+
+class DieRollar {
+    public static void main(String[] args) {
+        Random gen = new Random();
+
+        Scanner in = new Scanner(System.in);
+
+
+        boolean done = false;
+
+        do {
+            int die1 = 0;
+            int die2 = 1;
+            int die3 = 2;
+            int dieRoll = die1 + die2 + die3;
+            int rollNum = 0;
+
+            System.out.printf("Roll Die1 Die2 Die3 Sum");
+            System.out.println("");
+            System.out.println("----------------------------");
+
+            while (die1 != die2 || die2 != die3 || die1 != die3) {
+                rollNum++;
+                die1 = gen.nextInt(6) + 1;
+                die2 = gen.nextInt(6) + 1;
+                die3 = gen.nextInt(6) + 1;
+                dieRoll = die1 + die2 + die3;
+
+                System.out.printf(" %-3d %3d %3d %3d %3d\n", rollNum, die1, die2, die3, dieRoll);
+
+            }
+                System.out.println("Do you want to roll again [Y/N]?");
+                if ("N".equalsIgnoreCase(in.nextLine())) {
+                    done = true;
+                } else {
+                    done = false;
+                }
+
+
+            }
+            while (!done) ;
+
+
+        }
+    }
+
